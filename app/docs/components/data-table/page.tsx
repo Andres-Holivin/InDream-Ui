@@ -44,7 +44,7 @@ const sampleData: User[] = [
 ]
 
 export default function DataTablePage() {
-  const [data,setData] = useState(sampleData)
+  const [data] = useState(sampleData)
   const [pagination] = useState({ page: 1, limit: 10, total: 3 })
 
   return (
@@ -70,7 +70,7 @@ export default function DataTablePage() {
           Usage
         </h2>
         <CodeBlock 
-          code={`import { DataTableV2 } from "@/registry/data-table"
+          code={`import { FullDataTable } from "@/registry/data-table"
 import type { ColumnDef } from "@tanstack/react-table"
 
 const columns: ColumnDef<User>[] = [
