@@ -36,23 +36,6 @@ export default function InstallationPage() {
         </p>
         <CodeBlock code="npx shadcn@latest init" language="bash" />
       </div>
-
-      <div className="space-y-4 pt-4">
-        <h2 className="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight">
-          Add Components
-        </h2>
-        <p className="leading-7 text-muted-foreground">
-          Install components from the InDream UI registry:
-        </p>
-        <CodeBlock 
-          code="npx shadcn@latest add indream-ui/data-table" 
-          language="bash" 
-        />
-        <p className="text-sm leading-7 text-muted-foreground">
-          This will add the component to your project along with all dependencies.
-        </p>
-      </div>
-
       <div className="space-y-4 pt-4">
         <h2 className="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight">
           Configure Registry
@@ -60,15 +43,31 @@ export default function InstallationPage() {
         <p className="leading-7 text-muted-foreground">
           Add the InDream UI registry to your <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">components.json</code>:
         </p>
-        <CodeBlock 
+        <CodeBlock
           code={`{
   "registries": {
     "indream-ui": "https://indream-ui.vercel.app/r/registry.json"
   }
-}`} 
-          language="json" 
+}`}
+          language="json"
         />
       </div>
+      <div className="space-y-4 pt-4">
+        <h2 className="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight">
+          Add Components
+        </h2>
+        <p className="leading-7 text-muted-foreground">
+          Install components from the InDream UI registry:
+        </p>
+        <CodeBlock
+          code="npx shadcn@latest add indream-ui/data-table"
+          language="bash"
+        />
+        <p className="text-sm leading-7 text-muted-foreground">
+          This will add the component to your project along with all dependencies.
+        </p>
+      </div>
+
 
       <div className="space-y-4 pt-4">
         <h2 className="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight">
@@ -77,20 +76,20 @@ export default function InstallationPage() {
         <p className="leading-7 text-muted-foreground">
           Import and use components in your app:
         </p>
-        <CodeBlock 
-          code={`import { DataTableV2 } from "@/registry/data-table"
+        <CodeBlock
+          code={`import { FullDataTable } from "@/registry/data-table"
 
 export function MyTable() {
   return (
-    <DataTableV2
+    <FullDataTable
       columns={columns}
       data={data}
       pagination={pagination}
       onQueryChange={handleQueryChange}
     />
   )
-}`} 
-          language="tsx" 
+}`}
+          language="tsx"
         />
       </div>
     </div>
