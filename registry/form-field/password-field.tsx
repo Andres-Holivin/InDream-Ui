@@ -20,7 +20,7 @@ export function PasswordField<T extends FieldValues>({ name, control, label, ...
             name={name}
             render={({ field }) => {
                 return <FormItem>
-                    {label && <FormLabel className="text-sm font-medium text-gray-700">{label}</FormLabel>}
+                    {label && <FormLabel className="text-sm font-medium ">{label}</FormLabel>}
                     <FormControl>
                         <div className="relative">
                             <Input

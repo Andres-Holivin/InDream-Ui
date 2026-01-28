@@ -27,7 +27,7 @@ export function InputField<T extends FieldValues>({ name, control, label, ...pro
             name={name}
             render={({ field }) => {
                 return <FormItem>
-                    {label && <FormLabel className="text-sm font-medium text-gray-700">{label}</FormLabel>}
+                    {label && <FormLabel className="text-sm font-medium ">{label}</FormLabel>}
                     <FormControl>
                         <Input {...field} {...props} />
                     </FormControl>
