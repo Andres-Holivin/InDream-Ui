@@ -26,7 +26,7 @@ const getPageCountFromPagination = (pagination?: RemotePaginationMeta) => {
   return null;
 };
 
-export function DataTableV2<TData>({
+export function FullDataTable<TData>({
   columns,
   data,
   pagination,

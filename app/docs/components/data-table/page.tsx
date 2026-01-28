@@ -1,11 +1,11 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { DataTableV2 } from "@/registry/data-table"
 import { ComponentPreview } from "@/components/component-preview"
 import { CodeBlock } from "@/components/code-block"
 import { Separator } from "@/components/ui/separator"
 import type { ColumnDef } from "@tanstack/react-table"
+import { FullDataTable } from "@/registry/data-table"
 
 type User = {
   id: number
@@ -90,7 +90,7 @@ export function UsersTable() {
   const [isLoading, setIsLoading] = useState(true)
 
   return (
-    <DataTableV2
+    <FullDataTable
       columns={columns}
       data={data}
       pagination={pagination}
@@ -109,7 +109,7 @@ export function UsersTable() {
           Example
         </h2>
         <ComponentPreview
-          code={`<DataTableV2
+          code={`<FullDataTable
   columns={columns}
   data={data}
   pagination={{ page: 1, limit: 10, total: 3 }}
@@ -117,7 +117,7 @@ export function UsersTable() {
 />`}
         >
           <Suspense fallback={<div className="h-48 rounded-md border" />}>
-            <DataTableV2
+            <FullDataTable
               columns={columns}
               data={data}
               pagination={pagination}
