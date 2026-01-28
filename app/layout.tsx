@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "InDream UI",
   description: "Beautifully designed components built with React and Tailwind CSS",
+  icons:{
+    icon: "/logo.svg",    
+  }
 };
 
 export default function RootLayout({
